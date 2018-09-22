@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>User Name</title>
+</head>
+<body>
+    <form name="my form" onsubmit="return myFun()">
+    <label><strong>User Name:</strong></label>
+    <input type="text" id="username" value=""><br>
+    <input type="submit" value="submit">
+    <p style="color:red" id="message"> </p>
+    </form>
+    </body>
+    
+    
+    <script> 
+    function myFun(){
+        var correct_way=/[A-Za-z]/
+        var a=document.getElementById("username").value;
+        
+        if(a.length==" "){
+        document.getElementById("message").innerHTML="please user name";
+        return false;
+        }
+         if(a.length<5){
+             document.getElementById("message").innerHTML="please Enter five character";
+             return false;
+         }
+        if(a.length>15){
+            document.getElementById("message").innerHTML="please Enter 15 character"
+            return false;
+        }
+       if(a.match(correct_way))
+           true;
+    }
+    
+    
+    
+    </script>
